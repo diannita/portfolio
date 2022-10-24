@@ -1,25 +1,46 @@
 :root {
-  --primary-color: #6c63ff;
-  --secondary-color: #f5f2fe;
+  --primary-color: #444e9f;
+  --secondary-color: #7d77a6;
+  --terciary-color: white;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  --heading-font-size: 60px;
+  --icon-spacing: 15px;
+  --hover-color: #a2aad0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
-  margin-top: 100px;
+  height: 100%;
+  background-image: radial-gradient(
+      circle at 3.79% 92.21%,
+      #a2aad0,
+      transparent 45%
+    ),
+    radial-gradient(circle at 15.23% 71.63%, #caafcc, transparent 48%),
+    radial-gradient(circle at 34.1% 72.55%, #f1c6d6, transparent 31%),
+    radial-gradient(circle at 59.88% 39.32%, #f5b7ab, transparent 60%),
+    radial-gradient(circle at 50% 50.04%, #84b2ef, transparent 100%),
+    radial-gradient(circle at 50% 50.04%, #fff5ed, transparent 100%),
+    radial-gradient(circle at 50% 50.04%, #2f7bd1, transparent 100%),
+    radial-gradient(circle at 50% 50%, #4d5cb9, #99a0cb 100%);
 }
-
-h1,
-h2,
-h3 {
-  margin: 0;
-}
-
 h1 {
-  font-size: 96px;
+  margin-top: 35px;
+  font-family: "DM Serif Text";
+  font-size: var(--heading-font-size);
+  text-align: center;
+  line-height: 75px;
+  color: var(--primary-color);
 }
-
 h2 {
-  font-size: 48px;
+  margin-top: 20px;
+  font-family: "DM Serif Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 75px;
+  color: var(--primary-color);
 }
 
 h3 {
@@ -27,11 +48,66 @@ h3 {
   opacity: 0.7;
 }
 
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  height: 100vh;
+}
+
 p {
   font-size: 18px;
   line-height: 1.5;
 }
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+#arrow-down {
+  font-size: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 30px;
 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+a.arrow-link {
+  color: white;
+}
+a.open-source-link,
+.footer-github,
+.footer-cv,
+.footer-email {
+  color: var(--primary-color) !important;
+  text-decoration: none;
+}
+a.open-source-link:hover {
+  color: white;
+  text-decoration: none;
+  transition: all 100ms ease-in-out;
+}
+.profile-pic {
+  object-fit: cover;
+  width: 179px;
+  height: 226px;
+
+  background: url(me.jpg);
+  filter: drop-shadow(1px 5px 10px rgba(38, 31, 31, 0.37));
+  border-radius: 25px;
+  transform: rotate(35deg);
+}
 .navigation-links {
   display: flex;
   margin-top: 40px;
@@ -51,7 +127,9 @@ p {
   box-shadow: var(--box-shadow);
   color: white;
 }
-
+.primary-link:hover {
+  color: rgb(162, 206, 244);
+}
 .secondary-link {
   border-radius: 4px;
   padding: 20px 15px;
@@ -85,4 +163,128 @@ p {
 
 .email-link:hover {
   text-decoration: underline;
+}
+#summary-header {
+  width: fit-content;
+  padding: 50px 0 0;
+  margin-bottom: 50px;
+  border-bottom: 1px solid var(--secondary-color);
+}
+.project-summary {
+  background-color: white;
+  width: 100%;
+}
+.intro {
+  border-bottom: 1px solid white;
+}
+.description {
+  font-family: "Nunito";
+  font-size: 24px;
+  text-align: center;
+  line-height: 33px;
+  color: #7d77a6;
+}
+.home-page .arrow {
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 5px;
+}
+.footer-container {
+  width: 100%;
+  max-width: none;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.footer-text {
+  font-family: "Nunito";
+  font-size: 18px;
+  text-align: left;
+  line-height: 33px;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+.fa-chevron-right {
+  margin: 90px auto;
+  margin-bottom: 50px;
+  padding: 25px 15px;
+  font-size: 30px;
+  line-height: 22px;
+  color: white;
+  opacity: 0.7;
+}
+.scroll-top,
+.portfolio-scroll-top {
+  display: block;
+  text-align: right;
+  margin-right: 20px;
+  font-size: 45px;
+  opacity: 0.5;
+}
+.scroll-top .to-top,
+.portfolio-scroll-top .to-top {
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-bottom: 25px;
+  color: var(--secondary-color);
+}
+.footer-icons {
+  text-align: right;
+  font-size: 30px;
+  word-spacing: var(--icon-spacing);
+}
+.footer-github:hover,
+.footer-linkedin:hover,
+.footer-email:hover,
+.footer-cv:hover {
+  color: white !important;
+  transition: all 100ms ease-in-out;
+}
+@media (max-width: 767px) {
+  h1,
+  h2 {
+    font-size: 33px;
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 0;
+  }
+  .description,
+  .footer-text {
+    font-size: 16px;
+  }
+  .link-icons,
+  .soon-border,
+  p {
+    text-align: center;
+  }
+  .linkedin-button {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .footer-text,
+  .footer-icons {
+    text-align: center;
+  }
+  .footer-text {
+    white-space: normal;
+    margin-bottom: 0;
+  }
+  .footer-icons {
+    margin-top: 12px;
+  }
+  .email-button,
+  .linkedin-button,
+  .fa-chevron-right {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .fa-chevron-right {
+    padding-left: 0;
+  }
 }
