@@ -274,6 +274,17 @@ a.open-source-link:hover {
   color: var(--hover-color);
   transition: all 100ms ease-in-out;
 }
+#project-content {
+  padding: 0;
+}
+.soon-border {
+  border-bottom: 3px solid rgb(28, 28, 200);
+}
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .footer-container {
   width: 100%;
   max-width: none;
@@ -348,6 +359,12 @@ a.open-source-link:hover {
   }
 }
 @media (max-width: 992px) {
+  .portfolio-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
   .footer-text,
   .footer-icons {
     text-align: center;
@@ -396,6 +413,9 @@ a.open-source-link:hover {
   }
   .btn-portfolio-about {
     margin-top: 30px;
+  }
+  .project-portfolio {
+    height: auto;
   }
 }
 @media (max-width: 575px) {
