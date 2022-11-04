@@ -42,23 +42,15 @@ h2 {
   line-height: 75px;
   color: var(--primary-color);
 }
-
 h3 {
   font-size: 24px;
   opacity: 0.7;
 }
-
-.home-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 30px;
-  height: 100vh;
-}
-
 p {
-  font-size: 18px;
+  font-family: "Nunito";
+  font-size: 25px;
   line-height: 1.5;
+  color: var(--primary-color);
 }
 @keyframes floating {
   0% {
@@ -71,12 +63,18 @@ p {
     transform: translate(0, -0px);
   }
 }
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  height: 100vh;
+}
 #arrow-down {
   font-size: 40px;
   line-height: 45px;
   text-align: center;
   margin-bottom: 30px;
-
   position: absolute;
   bottom: 0;
   left: 0;
@@ -113,11 +111,9 @@ a.open-source-link:hover {
   margin-top: 40px;
   justify-content: center;
 }
-
 .navigation-links a {
   margin: 20px;
 }
-
 .primary-link {
   border-radius: 4px;
   padding: 20px 15px;
@@ -138,21 +134,17 @@ a.open-source-link:hover {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
-
 .homepage-link {
   color: var(--primary-color);
   text-align: center;
   display: block;
 }
-
 .about-paragraphs {
   margin: 30px 0;
 }
-
 .about-paragraphs p {
   margin: 10px;
 }
-
 .email-link {
   display: flex;
   justify-content: center;
@@ -160,7 +152,6 @@ a.open-source-link:hover {
   font-size: 28px;
   text-decoration: none;
 }
-
 .email-link:hover {
   text-decoration: underline;
 }
@@ -190,6 +181,98 @@ a.open-source-link:hover {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   margin-top: 5px;
+}
+.about-content,
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-style {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#about-header {
+  position: relative;
+  border-bottom: 2px solid white;
+  margin: 50px auto;
+  margin-bottom: 130px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.about-pic {
+  object-fit: cover;
+  max-width: 500px;
+  height: auto;
+  background: url(about-me.jpg);
+  box-shadow: 0px 0px 13px 6px rgba(255, 255, 255, 0.51);
+  border-radius: 74px;
+}
+.about-desc {
+  max-width: 850px;
+  padding-left: 25px;
+  margin: 10px;
+}
+.col-lg-6 {
+  column-width: 660px;
+}
+.btn-portfolio,
+.btn-portfolio-about,
+.email-button,
+.linkedin-button {
+  margin: 90px auto;
+  margin-bottom: 50px;
+  font-family: "Nunito";
+  font-size: 20px;
+  line-height: 22px;
+  padding: 25px 40px;
+  background-color: var(--primary-color);
+  border-radius: 50px;
+  border: none;
+  text-transform: capitalize;
+  box-shadow: var(--box-shadow);
+}
+.btn-portfolio-about {
+  margin-top: 130px;
+  text-decoration: none;
+  color: var(--terciary-color);
+}
+.btn-portfolio:hover,
+.btn-portfolio-about:hover {
+  color: rgb(162, 206, 244);
+  font-weight: 500;
+  transition: all 150ms ease-in-out;
+}
+.bg-about-content {
+  background: linear-gradient(
+    109.6deg,
+    rgb(245, 239, 249) 30.1%,
+    rgb(207, 211, 236) 100.2%
+  );
+  border-radius: 15px;
+}
+.tech-icons {
+  word-spacing: var(--icon-spacing);
+  margin-top: 20px;
+}
+.tech-icons {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+.github-icon,
+.ext-icon,
+.fa-linkedin,
+.fa-envelope,
+.fa-file-lines {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+.github-icon:hover,
+.ext-icon:hover {
+  color: var(--hover-color);
+  transition: all 100ms ease-in-out;
 }
 .footer-container {
   width: 100%;
@@ -286,5 +369,44 @@ a.open-source-link:hover {
   }
   .fa-chevron-right {
     padding-left: 0;
+  }
+  .about-content {
+    height: auto;
+  }
+  #about-header {
+    margin-bottom: px;
+  }
+  #about-header {
+    margin-bottom: 25px;
+  }
+  .about-pic {
+    max-width: 250px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  img .about-pic {
+    height: auto;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 30px;
+  }
+  .about-desc {
+    margin: 15px;
+    padding-left: 0;
+  }
+  .btn-portfolio-about {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 575px) {
+  #project-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  p {
+    font-size: 15px;
+  }
+  .about-content {
+    height: auto;
   }
 }
